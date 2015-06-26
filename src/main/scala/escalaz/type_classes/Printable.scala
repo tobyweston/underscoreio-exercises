@@ -6,7 +6,7 @@ trait Printable[A] {
 
 object PrintDefaults {
   implicit var stringPrintable = new Printable[String] {
-    def format(value: String): String = value.toString
+    def format(value: String): String = value
   }
   implicit var intPrintable = new Printable[Int] {
     def format(value: Int): String = value.toString
