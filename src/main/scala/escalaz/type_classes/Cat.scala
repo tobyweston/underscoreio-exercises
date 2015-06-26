@@ -2,6 +2,7 @@ package escalaz.type_classes
 
 object Cat {
 
+  import PrintDefaults._
   implicit val catPrintable = new Printable[Cat] {
     def format(cat: Cat) = {
       val name  = Print.format(cat.name)
