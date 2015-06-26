@@ -27,4 +27,9 @@ class PrintableTest extends Specification {
     import PrintSyntax._
     cat.format must_== "Bobby Brown is a 15 year-old Brown cat."
   }
+
+  "Printing using the `syntax` class (but this time using the context bounds syntax)" >> {
+    import PrintSyntax._
+    cat.formatAlt must_== "Bobby Brown is a 15 year-old Brown cat."
+  }
 }
