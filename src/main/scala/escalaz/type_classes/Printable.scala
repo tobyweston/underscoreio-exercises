@@ -11,9 +11,6 @@ object PrintDefaults {
   implicit var intPrintable = new Printable[Int] {
     def format(value: Int): String = value.toString
   }
-  implicit var catPrintable = new Printable[Cat] {
-    def format(cat: Cat): String = s"${cat.name} is a ${cat.age} year-old ${cat.color} cat."
-  }
 }
 
 object Print {
@@ -25,4 +22,4 @@ object Print {
   }
 }
 
-case class Cat(name: String, age: Int, color: String)
+
