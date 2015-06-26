@@ -9,4 +9,11 @@ class PrintableTest extends Specification {
     PrintDefaults.intPrintable.format(23) must_== "23"
   }
 
+  import PrintDefaults._
+  "Using Print interface methods directly" >> {
+    Print.format("Hello") must_== "Hello"
+    Print.format(23) must_== "23"
+    // Print.format(23L) must_== 23 // could not find implicit value for Printable[Long] ✓
+  }
+
 }

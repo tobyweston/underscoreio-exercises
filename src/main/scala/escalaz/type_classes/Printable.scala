@@ -12,3 +12,12 @@ object PrintDefaults {
     def format(value: Int): String = value.toString
   }
 }
+
+object Print {
+  def format[A](value: A)(implicit printer: Printable[A]): String = {
+    printer.format(value)
+  }
+  def print[A](value: A)(implicit printer: Printable[A]) {
+    println(printer.format(value))
+  }
+}
