@@ -22,4 +22,18 @@ object Print {
   }
 }
 
+object PrintSyntax {
+
+  implicit class PrintOps[A](value: A) {
+    def format(implicit printer: Printable[A]): String = {
+      printer.format(value)
+    }
+
+    def print(implicit printer: Printable[A]) {
+      println(printer.format(value))
+    }
+  }
+
+}
+
 
