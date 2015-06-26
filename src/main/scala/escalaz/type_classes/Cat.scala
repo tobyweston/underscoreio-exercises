@@ -4,7 +4,11 @@ object Cat {
 
   implicit val catPrintable = new Printable[Cat] {
     def format(cat: Cat) = {
-      s"${cat.name} is a ${cat.age} year-old ${cat.color} cat."
+      val name  = Print.format(cat.name)
+      val age   = Print.format(cat.age)
+      val color = Print.format(cat.color)
+
+      s"$name is a $age year-old $color cat."
     }
   }
 }
