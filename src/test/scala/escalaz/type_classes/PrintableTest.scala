@@ -16,4 +16,7 @@ class PrintableTest extends Specification {
     // Print.format(23L) must_== 23 // could not find implicit value for Printable[Long] ✓
   }
 
+  "Printing a Cat (meow!)" >> {
+    Print.format(Cat("Bobby Brown", 15, "Brown")) must_== "Bobby Brown is a 15 year-old Brown cat."
+  }
 }
