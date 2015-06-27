@@ -42,10 +42,10 @@ object PrintSyntax {
       * {{{def foo[A](implicit ma: M[A])}}}
       *
       */
-    def formatAlt[A : Printable]: String = {
-      val printer: Printable[A] = implicitly[Printable[A]]
-      printer.format(value)
-    }
+//    def formatAlt[A](implicit printer: Printable[A]): String = {
+//      val printer: Printable[A] = implicitly[Printable[A]]
+//      printer.format(value)
+//    }
   }
 
 }
